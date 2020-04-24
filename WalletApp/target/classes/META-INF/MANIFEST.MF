@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Wallet
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Himanshu Rathod
+Implementation-Vendor-Id: com.example
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/Wallet
+Created-By: Maven Integration for Eclipse
+
