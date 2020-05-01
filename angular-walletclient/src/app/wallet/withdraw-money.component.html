@@ -1,0 +1,67 @@
+<h3 class="text-primary" style="text-align: center;">{{ title }}</h3>
+<hr class="bg-primary" />
+<div style="width: 100%; overflow: hidden;">
+  <div style="width: 600px; float: left; margin-top: 50px; margin-left: 50px;">
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+      <table>
+        <tr>
+          <td class="text-primary"><b>Account Number</b></td>
+          <td>
+            <input
+              style="width: 250px; margin-left: 40px;"
+              type="number"
+              [(ngModel)]="accNo"
+              name="accNo"
+              readonly
+              required
+            />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Amount</b></td>
+          <td>
+            <input
+              style="width: 250px; margin-left: 40px;"
+              type="number"
+              [(ngModel)]="amount"
+              name="amount"
+              placeholder="Enter Amount"
+              required
+            />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td></td>
+          <td>
+            <button
+              style="margin-left: 40px;"
+              type="submit"
+              class="btn btn-primary"
+            >
+              Withdraw
+            </button>
+            <button
+              style="margin-left: 50px;"
+              type="button"
+              class="btn btn-primary"
+              (click)="goToMenu()"
+            >
+              Back to Menu
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div style="margin-left: 700px;">
+    <img
+      src="assets/images/withdraw.jpg"
+      height="250"
+      width="250"
+      style="margin-top: 40px;"
+      alt=""
+    />
+  </div>
+</div>

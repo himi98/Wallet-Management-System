@@ -1,5 +1,6 @@
 package beans;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public interface WalletService {
@@ -16,5 +17,7 @@ public interface WalletService {
 	public List<Transaction> viewTransactions(long accNo);
 
 	public Wallet validateCustomer(long cid);
+	
+	public List<BigDecimal> getAccountList();
 
 }

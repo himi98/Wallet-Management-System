@@ -26,5 +26,24 @@ public class Transaction {
 	private String timeStamp;
 	@Column(name = "UpdatedBalance")
 	private double updatedBalance;
+	
+	public Transaction(long transactionId, long sourceAcc, Long destAcc, String type, double amount, String timeStamp,
+			double updatedBalance) {
+		super();
+		this.transactionId = transactionId;
+		this.sourceAcc = sourceAcc;
+		this.destAcc = destAcc;
+		this.type = type;
+		this.amount = amount;
+		this.timeStamp = timeStamp;
+		this.updatedBalance = updatedBalance;
+	}
+
+	public Transaction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 }

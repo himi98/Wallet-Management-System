@@ -1,0 +1,85 @@
+<h3 class="text-primary" style="text-align: center;">{{ title }}</h3>
+<hr class="bg-primary" />
+<div style="margin-left: 50px;" class="container-fluid">
+  <div class="row">
+    <div class="col-lg-4">
+      <img
+        src="assets/images/deposit.jpg"
+        height="200px"
+        width="200px"
+        alt=""
+      /><br />
+      <a
+        class="text-primary"
+        role="button"
+        (click)="goToDeposit()"
+        style="margin-left: 45px; cursor: pointer;"
+        >Deposit Money</a
+      >
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="assets/images/withdraw.jpg"
+        height="200px"
+        width="200px"
+        alt=""
+      /><br />
+      <a
+        class="text-primary"
+        role="button"
+        (click)="goToWithdraw()"
+        style="margin-left: 45px; cursor: pointer;"
+        >Withdraw Money</a
+      >
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="assets/images/transfer.jpg"
+        height="200px"
+        width="200px"
+        alt=""
+      /><br />
+      <a
+        class="text-primary"
+        role="button"
+        (click)="goToTransfer()"
+        style="margin-left: 45px; cursor: pointer;"
+        >Transfer Money</a
+      >
+    </div>
+  </div>
+  <br />
+  <br />
+  <div style="margin-left: 150px;" class="row">
+    <div class="col-lg-4">
+      <img
+        src="assets/images/accountDetails.jpg"
+        height="200px"
+        width="200px"
+        alt=""
+      /><br />
+      <a
+        class="text-primary"
+        role="button"
+        (click)="goToViewAccount()"
+        style="margin-left: 45px; cursor: pointer;"
+        >View Account Details</a
+      >
+    </div>
+    <div class="col-lg-4">
+      <img
+        src="assets/images/transactions.jpg"
+        height="200px"
+        width="200px"
+        alt=""
+      /><br />
+      <a
+        class="text-primary"
+        role="button"
+        (click)="goToViewTransactions()"
+        style="margin-left: 20px; cursor: pointer;"
+        >View Transaction History</a
+      >
+    </div>
+  </div>
+</div>

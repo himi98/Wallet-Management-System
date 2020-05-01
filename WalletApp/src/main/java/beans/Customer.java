@@ -22,5 +22,17 @@ public class Customer {
 	private String gender;
 	@Column(name = "Dob")
 	private String dob;
+	public Customer(String custName, long custId, String address, String gender, String dob) {
+		super();
+		this.custName = custName;
+		this.custId = custId;
+		this.address = address;
+		this.gender = gender;
+		this.dob = dob;
+	}
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 }

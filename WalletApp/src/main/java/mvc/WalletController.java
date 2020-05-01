@@ -1,5 +1,6 @@
 package mvc;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityNotFoundException;
@@ -64,11 +65,16 @@ public class WalletController {
 		Wallet wallet = wtServ.viewAccount(Long.parseLong(cid));
 		return ResponseEntity.ok().body(wallet);
 	}
-
+	
 	@RequestMapping(value = "/viewTransactions", method = RequestMethod.POST)
 	public ResponseEntity<List<Transaction>> viewTransactions(@Valid @RequestBody String accNo) {
 		List<Transaction> transactions = wtServ.viewTransactions(Long.parseLong(accNo));
 		return ResponseEntity.ok().body(transactions);
 	}
 
+	@RequestMapping(value = "/getAccountList", method = RequestMethod.GET)
+	public ResponseEntity<List<BigDecimal>> getAccountList() {
+		List<BigDecimal> accountList = wtServ.getAccountList();
+		return ResponseEntity.ok().body(accountList);
+	}	
 }

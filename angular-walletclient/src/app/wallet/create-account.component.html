@@ -1,0 +1,152 @@
+<h3 class="text-primary" style="text-align: center;">{{ title }}</h3>
+<hr class="bg-primary" />
+<div style="width: 100%; overflow: hidden;">
+  <div style="width: 600px; float: left;">
+    <form ngNativeValidate (ngSubmit)="onSubmit()">
+      <table>
+        <tr>
+          <td class="text-primary"><b>Customer Name</b></td>
+          <td>
+            <input
+              style="width: 250px; margin-left: 40px;"
+              type="text"
+              [(ngModel)]="wallet.customer.custName"
+              name="custName"
+              placeholder="Enter Full Name"
+              required
+            />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Customer Address</b></td>
+          <td>
+            <textarea
+              rows="2"
+              cols="50"
+              style="margin-left: 40px;"
+              [(ngModel)]="wallet.customer.address"
+              name="address"
+              placeholder="Enter Address"
+              required
+            ></textarea>
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Gender</b></td>
+          <td class="text-primary">
+            <input
+              style="margin-left: 40px;"
+              type="radio"
+              [(ngModel)]="wallet.customer.gender"
+              name="gender"
+              value="Male"
+              required
+            />
+            Male
+            <input
+              style="margin-left: 20px;"
+              type="radio"
+              [(ngModel)]="wallet.customer.gender"
+              name="gender"
+              value="Female"
+              required
+            />
+            Female
+            <input
+              type="radio"
+              style="margin-left: 20px;"
+              [(ngModel)]="wallet.customer.gender"
+              name="gender"
+              value="Other"
+              required
+            />
+            Other
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Date of Birth</b></td>
+          <td class="text-primary">
+            <input
+              style="width: 250px; margin-left: 40px;"
+              type="date"
+              [(ngModel)]="wallet.customer.dob"
+              name="dob"
+              required
+            />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Account Number</b></td>
+          <td>
+            <input
+              style="width: 250px; margin-left: 40px;"
+              type="number"
+              [(ngModel)]="wallet.accNo"
+              name="accNo"
+              placeholder="Enter 9-15 digits A/C No"
+              required
+            />
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td class="text-primary"><b>Bank Name</b></td>
+          <td>
+            <select
+              style="width: 250px; margin-left: 40px;"
+              name="bankName"
+              [(ngModel)]="wallet.bankName"
+              required
+            >
+              <option selected disabled>Select Bank</option>
+              <option value="ICICI Bank">ICICI Bank</option>
+              <option value="Axis Bank">Axis Bank</option>
+              <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+              <option value="HDFC Bank">HDFC Bank</option>
+              <option value="HSBC Bank">HSBC Bank</option>
+              <option value="State Bank of India">State Bank of India</option>
+              <option value="Bank of Baroda">Bank of Baroda</option>
+              <option value="Citi Bank">Citi Bank</option>
+              <option value="IDFC First Bank">IDFC First Bank</option>
+              <option value="Union Bank">Union Bank</option>
+            </select>
+
+            <!-- <input
+              style="width: 250px; margin-left: 40px;"
+              type="text"
+              [(ngModel)]="wallet.bankName"
+              name="bankName"
+              required
+            /> -->
+          </td>
+        </tr>
+        <br />
+        <tr>
+          <td></td>
+          <td>
+            <button
+              style="margin-left: 100px;"
+              type="submit"
+              class="btn btn-primary"
+            >
+              Submit Details
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div style="margin-left: 700px;">
+    <img
+      src="assets/images/createAccount.jpg"
+      height="350"
+      width="350"
+      style="align-content: center;"
+      alt=""
+    />
+  </div>
+</div>

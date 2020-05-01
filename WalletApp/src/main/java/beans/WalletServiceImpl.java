@@ -1,5 +1,6 @@
 package beans;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
@@ -119,4 +120,11 @@ public class WalletServiceImpl implements WalletService {
 		Timestamp ts = new Timestamp(time);
 		return ts;
 	}
+
+	@Override
+	public List<BigDecimal> getAccountList() {
+		// TODO Auto-generated method stub
+		return wtDao.getAccountList();
+	}
+	
 }

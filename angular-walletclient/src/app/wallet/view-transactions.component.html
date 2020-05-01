@@ -1,0 +1,59 @@
+<head>
+  <style>
+    table,
+    th,
+    td {
+      border: 2px solid dodgerblue;
+      text-align: center;
+      width: 800px;
+    }
+    th,
+    td {
+      padding: 4px;
+    }
+  </style>
+</head>
+<h3 class="text-primary" style="text-align: center;">{{ title }}</h3>
+<hr class="bg-primary" />
+<div style="width: 100%; overflow: hidden;">
+  <div style="float: left; width: 830px;">
+    <table>
+      <tr class="text-primary">
+        <th>Transaction ID</th>
+        <th>Timestamp</th>
+        <th>Type</th>
+        <th>A/C No</th>
+        <th>Beneficiary A/C No</th>
+        <th>Amount</th>
+        <th>Available Balance</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions" style="color: navy;">
+        <td>{{ transaction.transactionId }}</td>
+        <td>{{ transaction.timeStamp }}</td>
+        <td>{{ transaction.type }}</td>
+        <td>{{ transaction.sourceAcc }}</td>
+        <td>{{ transaction.destAcc }}</td>
+        <td>{{ transaction.amount }}/-</td>
+        <td>{{ transaction.updatedBalance }}/-</td>
+      </tr>
+    </table>
+    <br />
+    <button
+      style="margin-left: 670px; width: 130px;"
+      type="button"
+      class="btn btn-primary"
+      (click)="goToMenu()"
+    >
+      Back to Menu
+    </button>
+  </div>
+  <div style="margin-left: 850px;">
+    <img
+      src="assets/images/transactions.jpg"
+      height="200"
+      width="200"
+      style="margin-top: 100px;"
+      alt=""
+    />
+  </div>
+</div>

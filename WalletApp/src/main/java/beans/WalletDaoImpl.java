@@ -1,9 +1,11 @@
 package beans;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,6 +91,15 @@ public class WalletDaoImpl implements WalletDao {
 				.createQuery("SELECT tr FROM Transaction tr where source_acc=" + wallet.getAccNo(), Transaction.class);
 		List<Transaction> transactions = q2.getResultList();
 		return transactions;
+	}
+
+	@Override
+	public List<BigDecimal> getAccountList() {
+		// TODO Auto-generated method stub
+		Query q2 = entityManager
+				.createNativeQuery("SELECT wt.Acc_No FROM Wallet wt");
+		List<BigDecimal> accountList = q2.getResultList();
+		return accountList;
 	}
 
 }

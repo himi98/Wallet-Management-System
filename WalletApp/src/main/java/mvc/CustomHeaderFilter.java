@@ -24,10 +24,13 @@ public class CustomHeaderFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletResponse httpServletResponse = (HttpServletResponse) response;
+				
 		httpServletResponse.addHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Origin");
 		httpServletResponse.addHeader("Access-Control-Allow-Headers", "Content-Type");
+		httpServletResponse.addHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Methods");
 		httpServletResponse.setHeader("Access-Control-Allow-Origin", "*");
 		httpServletResponse.setHeader("Content-Type", "*/*");
+		httpServletResponse.setHeader("Access-Control-Allow-Methods", "*");
 		chain.doFilter(request, response); // continue execution of other filter chain.
 	}
 

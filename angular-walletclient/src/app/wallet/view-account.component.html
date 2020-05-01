@@ -1,0 +1,78 @@
+<h3 class="text-primary" style="text-align: center;">{{ title }}</h3>
+<hr class="bg-primary" />
+<br />
+<div style="width: 100%; overflow: hidden;">
+  <div style="width: 740px; float: left;">
+    <table>
+      <tr>
+        <td class="text-primary"><b>Customer ID :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.customer.custId }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Customer Name :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.customer.custName }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Date of Birth (YYYY-MM-DD) :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.customer.dob }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Address :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.customer.address }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Account Number :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.accNo }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Bank Name :</b></td>
+        <td style="color: navy; padding-left: 40px;">
+          {{ wallet.bankName }}
+        </td>
+      </tr>
+      <br />
+      <tr>
+        <td class="text-primary"><b>Available Balance :</b></td>
+        <td style="color: navy; padding-left: 40px;">{{ wallet.balance }}/-</td>
+      </tr>
+      <br />
+      <tr>
+        <td></td>
+        <td>
+          <button
+            style="margin-left: 40px;"
+            type="button"
+            class="btn btn-primary"
+            (click)="goToMenu()"
+          >
+            Back to Menu
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="margin-left: 750px;">
+    <img
+      src="assets/images/accountDetails.jpg"
+      height="250"
+      width="250"
+      style="margin-top: 50px;"
+      alt=""
+    />
+  </div>
+</div>
