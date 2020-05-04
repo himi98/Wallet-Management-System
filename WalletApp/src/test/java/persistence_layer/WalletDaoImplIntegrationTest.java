@@ -2,10 +2,12 @@ package persistence_layer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.junit.Before;
@@ -179,6 +181,22 @@ public class WalletDaoImplIntegrationTest {
 		
 		//then
 		assertThat(transactions).isNotEqualTo(null);
+	}
+	
+	@Test
+	public void whenGetAccountList_thenReturnListOfAccounts() {
+		//given
+		entityManager.persist(wt);
+		entityManager.persist(wtB);
+		
+		//when
+		Query q2 = entityManager
+				.createNativeQuery("SELECT wt.Acc_No FROM Wallet wt");
+		List<BigDecimal> accountList = q2.getResultList();
+		entityManager.flush();
+		
+		//then
+		assertThat(accountList).isNotEqualTo(null);
 	}
 	
 	public Wallet viewAccount(long custId) {
